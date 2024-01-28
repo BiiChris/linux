@@ -673,7 +673,7 @@ extern void __module_get(struct module *module);
  * This call will fail if the module is in the process of being removed.
  *
  * Care must also be taken to ensure the module exists and is alive prior to
- * usage of this call. This can be gauranteed through two means:
+ * usage of this call. This can be guaranteed through two means:
  *
  * 1) Direct protection: you know an earlier caller must have increased the
  *    module reference through __module_get(). This can typically be achieved
