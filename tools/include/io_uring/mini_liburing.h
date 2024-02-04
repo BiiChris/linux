@@ -277,6 +277,6 @@ static inline void io_uring_prep_sendzc(struct io_uring_sqe *sqe, int sockfd,
 
 static inline void io_uring_cqe_seen(struct io_uring *ring)
 {
-	*(&ring->cq)->khead += 1;
+	ring->cq->khead += 1;
 	write_barrier();
 }
